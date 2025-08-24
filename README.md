@@ -23,7 +23,7 @@ La aplicación es portable, por lo que para utilizarla solo descarga y abre el [
 
 ## Captura
 
-[Página Web](https://d13g053.github.io/Pagina-Web-de-Martdown)
+[Página Web](https://diegocastillovasquez.github.io/Pagina-Web-de-Martdown)
 
 ![Captura de Martdown](captura.png)
 
