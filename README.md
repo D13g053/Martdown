@@ -19,7 +19,7 @@ Desarrollado como contribución a la comunidad estudiantil, este proyecto busca 
 
 ## Instalación y Uso
 
-La aplicación es portable, por lo que para utilizarla solo descarga y abre el [ejecutable para Windows]().
+La aplicación es portable, por lo que para utilizarla solo descarga y abre el [ejecutable para Windows](https://drive.google.com/file/d/1--e9mmbBtanLke74ZJ1wCcSOaykFXFiF/view?usp=sharing).
 
 ## Tecnologías Utilizadas
 
@@ -29,4 +29,5 @@ La aplicación es portable, por lo que para utilizarla solo descarga y abre el [
   - **Renderizado de Markdown**: Marked
   - **Renderizado de Matemáticas**: KaTeX
   - **Renderizado de Diagramas**: Mermaid
+
   - **Resaltado de Sintaxis**: highlight
