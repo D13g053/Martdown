@@ -1,0 +1,30 @@
+{
+  "name": "martdown",
+  "version": "1.0.0",
+  "description": "Editor de markdown con soporte para Tex y Mermaid",
+  "main": "main.js",
+  "author": "Watax Pin",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^37.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "productName": "Martdown",
+    "icon": "icon.png",
+    "extraFiles": [
+      "assets"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}

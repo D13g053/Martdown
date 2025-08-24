@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Martdown</title>
+        <link rel="stylesheet" href="katex.min.css">
+        <link rel="stylesheet" href="github.min.css">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <div id="mensaje-carga">Cargando...</div>
+        <header id="barra-herramientas">
+            <button id="btn-h1" title="Encabezado 1">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="4" y="18" font-family="Arial" font-size="16" font-weight="bold">H1</text>
+                </svg>
+            </button>
+            <button id="btn-h2" title="Encabezado 2">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="4" y="18" font-family="Arial" font-size="16" font-weight="bold">H2</text>
+                </svg>
+            </button>
+            <button id="btn-h3" title="Encabezado 3">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="4" y="18" font-family="Arial" font-size="16" font-weight="bold">H3</text>
+                </svg>
+            </button>
+            <button id="btn-bold" title="Negrita">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M7 5h5.5a3.5 3.5 0 1 1 0 7H7V5zm0 7h5a3.5 3.5 0 1 1 0 7H7v-7z" fill="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-italic" title="Cursiva">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M10 6h4l-1.5 12h-4Z" fill="none" stroke="currentColor" stroke-width="1.8"stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button id="btn-strike" title="Tachado">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="12" y="16" font-family="Arial" font-size="14" text-anchor="middle" fill="currentColor">S</text>
+                    <line x1="7" y1="12" x2="17" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button id="btn-ol" title="Lista ordenada">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="5" y="10.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">1.</text>
+                    <line x1="12" y1="10.5" x2="20" y2="10.5" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="5" y="15.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">2.</text>
+                    <line x1="12" y1="15.5" x2="20" y2="15.5" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="5" y="20.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">3.</text>
+                    <line x1="12" y1="20.5" x2="20" y2="20.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <button id="btn-ul" title="Lista no ordenada">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="5" y="10.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">•</text>
+                    <line x1="12" y1="10.5" x2="20" y2="10.5" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="5" y="15.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">•</text>
+                    <line x1="12" y1="15.5" x2="20" y2="15.5" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="5" y="20.5" font-family="Arial" font-size="9" fill="currentColor" dominant-baseline="middle">•</text>
+                    <line x1="12" y1="20.5" x2="20" y2="20.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <button id="btn-task" title="Lista de tareas">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor"/>
+                    <path d="M7 12l3 3 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <button id="btn-link" title="Enlace">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="currentColor"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-image" title="Imagen">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor"/>
+                    <circle cx="8.5" cy="8.5" r="2" fill="none" stroke="currentColor"/>
+                    <path d="M21 15l-5-5L5 21" fill="none" stroke="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-quote" title="Cita">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.5-1.5 3.5-3 4M18 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.5-1.5 3.5-3 4" fill="none" stroke="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-code" title="Bloque de código">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M10 9l-7 6 7 6M14 9l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <button id="btn-table" title="Tabla">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="1" fill="none" stroke="currentColor"/>
+                    <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor"/>
+                    <line x1="3" y1="15" x2="21" y2="15" stroke="currentColor"/>
+                    <line x1="9" y1="3" x2="9" y2="21" stroke="currentColor"/>
+                    <line x1="15" y1="3" x2="15" y2="21" stroke="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-hr" title="Línea horizontal">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <button id="btn-center" title="Centrar">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor"/>
+                    <line x1="7" y1="12" x2="17" y2="12" stroke="currentColor"/>
+                    <line x1="5" y1="18" x2="19" y2="18" stroke="currentColor"/>
+                </svg>
+            </button>
+            <div class="separador"></div>
+            <input type="text" id="titulo-documento" placeholder="Título del documento" maxlength="100" />
+            <div class="separador"></div>
+            <button id="btn-vista-editor" title="Solo editor">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor"/>
+                    <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor"/>
+                    <rect x="5" y="11" width="14" height="8" fill="currentColor" opacity="0.3" rx="1"/>
+                </svg>
+            </button>
+            <button id="btn-vista-ambos" title="Ambos paneles">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="1" fill="none" stroke="currentColor"/>
+                    <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor"/>
+                    <rect x="4" y="7" width="7" height="10" fill="currentColor" opacity="0.3" rx="0.5"/>
+                    <rect x="13" y="7" width="7" height="10" fill="currentColor" opacity="0.3" rx="0.5"/>
+                </svg>
+            </button>
+            <button id="btn-vista-preview" title="Solo previsualización">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="1" fill="none" stroke="currentColor"/>
+                    <rect x="5" y="7" width="14" height="10" fill="currentColor" opacity="0.3" rx="0.5"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                    <path d="M12 6v1M12 17v1M6 12h1M17 12h1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <div class="separador"></div>
+            <button id="btn-tema" title="Cambiar a tema oscuro">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path id="icono-luna" d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" fill="currentColor"/>
+                    <path id="icono-sol" d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" fill="currentColor" style="display:none"/>
+                </svg>
+            </button>
+            <div class="separador"></div>
+            <button id="btn-matematicas" title="Funciones matemáticas">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <text x="5" y="18" font-family="Arial" font-size="16" font-weight="bold">Σ</text>
+                </svg>
+            </button>
+            <div id="panel-matematicas" class="panel-matematicas">
+                <div class="seccion-delimitadores">
+                    <button class="delimitador-btn" id="btn-math-inline" title="Matemáticas en línea ($...$)">
+                        <span class="simbolo-delimitador">$…$</span>
+                        <span class="texto-delimitador">En línea</span>
+                    </button>
+                    <button class="delimitador-btn" id="btn-math-block" title="Matemáticas en bloque ($$...$$)">
+                        <span class="simbolo-delimitador">$$…$$</span>
+                        <span class="texto-delimitador">En bloque</span>
+                    </button>
+                </div>
+                <div class="categorias">
+                    <button class="categoria" data-categoria="delimitadores">Delimitadores</button>
+                    <button class="categoria" data-categoria="entornos">Entornos</button>
+                    <button class="categoria" data-categoria="letras">Letras</button>
+                    <button class="categoria" data-categoria="logica">Lógica</button>
+                    <button class="categoria" data-categoria="operadores">Operadores</button>
+                    <button class="categoria" data-categoria="especiales">Especiales</button>
+                    <button class="categoria" data-categoria="estilos">Estilos</button>
+                    <button class="categoria" data-categoria="puntuacion">Puntuación</button>
+                </div>
+                <div class="funciones-grid" id="funciones-delimitadores" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-entornos" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-letras" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-logica" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-operadores" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-especiales" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-estilos" style="display:none;"></div>
+                <div class="funciones-grid" id="funciones-puntuacion" style="display:none;"></div>
+            </div>
+            <button id="btn-mermaid" title="Diagramas Mermaid">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <rect x="6" y="6" width="4" height="4" rx="1" fill="currentColor"/>
+                    <rect x="14" y="6" width="4" height="4" rx="1" fill="currentColor"/>
+                    <rect x="10" y="14" width="4" height="4" rx="1" fill="currentColor"/>
+                    <path d="M8 8L12 16M16 8L12 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                    <path d="M8 8L16 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.8"/>
+                </svg>
+            </button>
+            <div id="panel-mermaid" class="panel-matematicas">
+                <div class="categorias">
+                    <button class="categoria" data-categoria="flowchart">Flujo</button>
+                    <button class="categoria" data-categoria="sequence">Secuencia</button>
+                    <button class="categoria" data-categoria="class">Clases</button>
+                    <button class="categoria" data-categoria="state">Estados</button>
+                    <button class="categoria" data-categoria="erd">Entidad-Relación</button>
+                    <button class="categoria" data-categoria="gantt">Gantt</button>
+                    <button class="categoria" data-categoria="pie">Circular</button>
+                    <button class="categoria" data-categoria="quadrant">Cuadrantes</button>
+                    <button class="categoria" data-categoria="gitGraph">GitGraph</button>
+                    <button class="categoria" data-categoria="c4">C4</button>
+                    <button class="categoria" data-categoria="mindmap">Mapas mentales</button>
+                    <button class="categoria" data-categoria="timeline">Cronología</button>
+                </div>
+                <div class="funciones-grid" id="diagramas-flowchart" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-sequence" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-class" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-state" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-erd" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-gantt" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-pie" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-quadrant" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-gitGraph" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-c4" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-mindmap" style="display:none;"></div>
+                <div class="funciones-grid" id="diagramas-timeline" style="display:none;"></div>
+            </div>
+            <div class="separador"></div>
+            <button id="btn-nuevo" title="Nuevo documento">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-abrir" title="Abrir archivo">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M4 5h6l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5"stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button id="btn-guardar" title="Guardar">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" fill="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-pdf" title="Exportar a PDF">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" fill="currentColor"/>
+                </svg>
+            </button>
+            <button id="btn-html" title="Exportar a HTML">
+                <svg width="22" height="22" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826-1.433-16.15zm5.266 7.302l-.173-2.035h7.538l.173-1.963h-9.78l.525 5.998h6.642l-.206 2.259-1.656.45.002-.001-1.698-.468-.109-1.244h-1.999l.216 2.711 3.163.876 3.313-.876.37-4.169h-7.358z"/>
+                </svg>
+            </button>
+            <div class="separador"></div>
+            <div id="indicador-guardado" title="Documento guardado">✓</div>
+        </header>
+        <main class="contenedor">
+            <div class="paneles">
+                <div class="panel-editor">
+                    <textarea id="editor" placeholder="Escribe aquí..."></textarea>
+                </div>
+                <div class="panel-preview">
+                    <div id="previsualizacion"></div>
+                </div>
+            </div>
+        </main>
+        <div id="modal-advertencia" class="modal" style="display:none;">
+            <div class="modal-contenido">
+                <h3 id="modal-titulo">Tienes cambios sin guardar</h3>
+                <p id="modal-mensaje"></p>
+                <div class="modal-botones">
+                    <button id="btn-modal-cancelar">Cancelar</button>
+                    <button id="btn-modal-confirmar">Salir del documento sin guardar</button>
+                </div>
+            </div>
+        </div>
+        <script src="marked.min.js"></script>
+        <script src="katex.min.js"></script>
+        <script src="auto-render.min.js"></script>
+        <script src="highlight.min.js"></script>
+        <script src="mermaid.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
