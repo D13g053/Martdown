@@ -33,6 +33,4 @@ La aplicación es portable, por lo que para utilizarla solo descarga y abre el [
   - **Renderizado de Markdown**: Marked
   - **Renderizado de Matemáticas**: KaTeX
   - **Renderizado de Diagramas**: Mermaid
-
   - **Resaltado de Sintaxis**: highlight
-
